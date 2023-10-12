@@ -6,7 +6,15 @@ const numbers = document.getElementsByClassName("numbers");
 const resultsDisplay = document.getElementById("results-display");
 const numbersOperators = document.getElementsByClassName("numbers-operators");
 const equalsButton = document.getElementById("equals");
-// console.log(numbersOperators);
+const allclear = document.getElementById("ac");
+
+function allCear(){
+    calc.setInput1("");
+    calc.setInput2("");
+    calc.setOperation("");
+    calc.setResult("");
+    calc.setFirstInputTrue();    
+}
 
 
 Array.prototype.forEach.call(numbers, (number) => {    
@@ -32,6 +40,35 @@ Array.prototype.forEach.call(numbersOperators, operator => {
 
 
 equalsButton.addEventListener("click", () => {
-    console.log(calc.getInput1());
-    console.log(calc.getInput2());
+    const number1 = parseFloat(calc.getInput1());
+    const number2 = parseFloat(calc.getInput2());
+    const operator = calc.getOperation();
+    if (operator === "+" ){
+        calc.setResult(number1 + number2);
+        resultsDisplay.innerText = calc.getResult();
+    }
+    else if (operator === "-"){
+        calc.setResult(number1-number2);
+        resultsDisplay.innerText = calc.getResult();
+    }
+    else if(operator === "x"){
+        calc.setResult(number1*number2);
+        resultsDisplay.innerText = calc.getResult();
+    }
+    else if(operator === "÷"){
+        if (number2 === 0){
+            resultsDisplay.innerText = "∞";
+            allCear();
+        }
+        else {
+            calc.setResult(number1/number2);
+            resultsDisplay.innerText = calc.getResult();
+        }
+    }
+
+})
+
+allclear.addEventListener("click", () => {
+    allCear();
+    resultsDisplay.innerText = "";
 })

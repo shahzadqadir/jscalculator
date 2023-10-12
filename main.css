@@ -10,8 +10,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 550px;
     border: 1px solid gray;
     border-radius: 5px;
     margin-top: 5%;
@@ -101,4 +101,28 @@
 .backspace:hover{
     background-color: #E73A6C;
     cursor: pointer;
+}
+
+.equals {
+    background-color: #BFDBF5;
+    height: 70px;
+    width: 70px;
+    border-radius: 30%;
+}
+
+.equals:hover{
+    background-color: #6EA0CE;
+    cursor: pointer;
+}
+
+.logo{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: right;
+    margin-right: 50px;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.logo:hover{
+    color: blue;
 }

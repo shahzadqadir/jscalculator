@@ -8,6 +8,12 @@ export function calculator (){
         getInput1(){
             return this.input1;
         },
+        setInput1(input1){
+            this.input1 = input1;
+        },
+        setInput2(input2){
+            this.input2 = input2;
+        },
         getInput2(){
             return this.input2;
         },
@@ -17,6 +23,9 @@ export function calculator (){
         setFirstInputFalse(){
             this.firstInput = false;
         },
+        setFirstInputTrue(){
+            this.firstInput = true;
+        },
         buildInput1(number){
             this.input1 += number;
         },
@@ -25,6 +34,9 @@ export function calculator (){
         },
         getResult(){
             return this.result;
+        },
+        setResult(result){
+            this.result = result;
         },
         setOperation(operation){
             this.operation = operation;
