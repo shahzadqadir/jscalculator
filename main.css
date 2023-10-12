@@ -1,0 +1,104 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.main-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 5%;
+}
+
+.main-box .result-display{
+    background-color: #EFF5F5;
+    border-radius: 5px;
+    width: 80%;
+    height: 50px;
+    margin-top: 1%;
+    margin-left: 10%;
+    padding-right: 1%;
+    padding-top: 1%;
+    font-size:x-large;
+    text-align: end;
+}
+
+.main-box .operations{
+    display: flex;
+    /* background-color: blue; */
+    width: 100%;
+    margin-top: 30px;
+    justify-content: center;    
+    text-align: center;
+    font-size: x-large;
+}
+
+.main-box .operations .numbers {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #E5E4E2;
+    border-radius: 30%;   
+}
+
+.special-symbol {
+    width: 70px;
+    height: 70px;
+    background-color: #FBC2C2;
+    border-radius: 30%; 
+}
+
+.special-symbol:hover{
+    background-color: #ea5c5c ;
+    cursor: pointer;
+}
+
+.numbers-operators {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #E5E4E2;
+    border-radius: 30%;   
+    background-color: #F2F5EF;
+}
+
+.numbers-operators:hover{
+    background-color: #E5E4E2;
+    cursor: pointer;
+}
+
+.memory{
+    width: 70px;
+    height: 70px;
+    border: 1px solid #E5E4E2;
+    border-radius: 30%;   
+    background-color: #DAF7A6;
+}
+
+.memory:hover{
+    background-color: #50C878;
+    cursor: pointer;
+}
+
+
+.numbers:hover{
+    background-color: #E5E4E2;
+    cursor: pointer;
+}
+
+.backspace {    
+    background-color: #EB7B9B;
+    border-radius: 30%;
+    width: 70px;
+    height: 70px;
+}
+
+.backspace:hover{
+    background-color: #E73A6C;
+    cursor: pointer;
+}
