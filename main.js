@@ -9,20 +9,17 @@ const equalsButton = document.getElementById("equals");
 // console.log(numbersOperators);
 
 
-Array.prototype.forEach.call(numbers, (number) => {
-    console.log(calc.getFirstInput());
-    if (calc.getFirstInput() == true){
+Array.prototype.forEach.call(numbers, (number) => {    
         number.onclick = () => {
-            calc.buildInput1(number.innerText);
-            resultsDisplay.innerText = calc.getInput1();
+            if (calc.getFirstInput()) {
+                calc.buildInput1(number.innerText);
+                resultsDisplay.innerText = calc.getInput1();
+            } else {
+                calc.buildInput2(number.innerText);
+                resultsDisplay.innerText = calc.getInput2();
+            }
         }
-    } else {
-        console.log("recording second input now.")
-        number.onclick = () => {
-            calc.buildInput2(number.innerText);
-            resultsDisplay.innerText = calc.getInput2();
-        }
-    }
+    
 });
 
 Array.prototype.forEach.call(numbersOperators, operator => {
@@ -36,5 +33,5 @@ Array.prototype.forEach.call(numbersOperators, operator => {
 
 equalsButton.addEventListener("click", () => {
     console.log(calc.getInput1());
-    // console.log(calc.getInput2());
+    console.log(calc.getInput2());
 })
